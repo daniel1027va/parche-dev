@@ -19,7 +19,92 @@
     </ul>
 </nav>
 <main id="inscripcion">
+  <h3>La entrada es gratuita y los cupos son limitados. Completa el formulario para reservar el tuyo.
+Los campos marcados con * son obligatorios.</h3>
 
+<form method="get" action="gracias.html">
+  <fieldset class="grupo">
+    <legend>Tus datos</legend>
+  <label for="nombre">Nombre Completo *</label>
+    <input type="text" name="nombre_completo" id="nombre" required>
+
+  <label for="correoelectronico">Corre electronico *</label>
+  <input type="email" name="correo_electronico" id="correoelectronico" required>
+
+  <label for="celular">Celular</label>
+  <input type="tel" name="celular" id="celular" pattern="3[0-9]{9}" maxlength="10" required>
+<label for="ciudad">Ciudad</label>
+ <select name="ciudad" id="ciudad"> Ciudad <option>Medellín</option> <option>Bello</option> <option>ItagÜí</option> <option>Envigado</option><option>Sabaneta</option><option>La estrella</option><option>Otra</option></select>
+ </fieldset>
+ 
+<fieldset class="grupo">
+  <legend>¿En qué momento estás? </legend>
+
+  <input type="radio" name="momento" id="momento-empezando" value="empezando" required>
+  <label for="momento-empezando">Estoy empezando a programar</label>
+
+  <input type="radio" name="momento" id="momento-programo" value="programo">
+  <label for="momento-programo">Ya programo, pero no trabajo en tecnología</label>
+
+  <input type="radio" name="momento" id="momento-trabajo" value="trabajo-tech">
+  <label for="momento-trabajo">Trabajo en tecnología</label>
+</fieldset>
+
+<fieldset class="grupo">
+  <legend>¿Que temas te interesan?</legend>
+
+<input type="checkbox" name="tema" id="tema-desarrollo-web" value="desarrollo-web">
+<label for="tema-desarollo_web">Desarrollo web</label>
+
+<input type="checkbox" name="tema" id="tema-datos-sql" value="datos-sql">
+<label for="tema-datos-sql">Datos y SQL</label>
+
+<input type="checkbox" name="tema" id="tema-accesibilidad" value="accesibilidad">
+<label for="tema-accesibilidad">Accesibilidad</label>
+
+<input type="checkbox" name="tema" id="tema-python" value="python">
+<label for="tema-python">python</label>
+
+<input type="checkbox" name="tema" id="tema-despliegue">
+<label for="tema-despliegue">Despliegue en la nube</label>
+</fieldset>
+
+<fieldset class="grupo">
+  <legend>Agenda</legend>
+    <p>Quiero inscribirme a:</p>
+
+  <input type="checkbox" name="agenda" id="agenda-html" value="html-sin-css">
+  <label for="agenda-html">HTML que se entiende sin CSS</label>
+
+  <input type="checkbox" name="agenda" id="agenda-sql" value="sql">
+  <label for="agenda-sql">SQL para curiosos</label>
+
+  <input type="checkbox" name="agenda" id="agenda-accesibilidad" value="accesibilidad">
+  <label for="agenda-accesibilidad">La web es para todos: accesibilidad desde el día uno</label>
+
+  <input type="checkbox" name="agenda" id="agenda-bot" value="bot-python">
+  <label for="agenda-bot">Taller: Tu primer bot con Python (30 cupos, trae tu computador)</label>
+
+  <input type="checkbox" name="agenda" id="agenda-deploy" value="zero-to-deploy">
+  <label for="agenda-deploy">From zero to deploy (charla en inglés)</label>
+
+  <label for="talla">Talla de camiseta</label>
+<select name="talla" id="talla">
+  <option>XS</option>
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+  <option>XL</option>
+  <option>XXL</option>
+</select>
+</fieldset>
+<fieldset>
+  <legend>¿Que esperas aprender en parche dev? (maximo 300 caracteres)</legend>
+  <textarea maxlength="300"></textarea>
+</fieldset>
+<input type="checkbox" name="conducta" id="conducta" value="acepto" required>
+<label for="conducta">Acepto el <a href="conducta.html">código de conducta</a> del evento *</label>
+<button type="submit">Enviar</button>
 </main>
 </header>
 <footer>
