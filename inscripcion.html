@@ -26,14 +26,15 @@ Los campos marcados con * son obligatorios.</h1>
 <form method="get" action="gracias.html">
   <fieldset class="grupo">
     <legend>Tus datos</legend>
-  <label for="nombre">Nombre Completo *</label>
-    <input type="text" name="nombre_completo" id="nombre" required>
+  <label for="nombre">Nombre completo *</label>
+<input type="text" name="nombre_completo" id="nombre" autocomplete="name" required>
 
-  <label for="correoelectronico">Correo electronico *</label>
-  <input type="email" name="correo_electronico" id="correoelectronico" required>
+
+  <label for="correoelectronico">Correo electrónico *</label>
+<input type="email" name="correo_electronico" id="correoelectronico" autocomplete="email" required>
 
   <label for="celular">Celular *</label>
-  <input type="tel" name="celular" id="celular" pattern="3[0-9]{9}" maxlength="10" required>
+<input type="tel" name="celular" id="celular" pattern="3[0-9]{9}" maxlength="10" autocomplete="tel-national" required>
 <label for="ciudad">Ciudad</label>
  <select name="ciudad" id="ciudad"><option>Medellín</option> <option>Bello</option> <option>ItagÜí</option> <option>Envigado</option><option>Sabaneta</option><option>La estrella</option><option>Otra</option>Ciudad</select>
  </fieldset>
@@ -87,7 +88,7 @@ Los campos marcados con * son obligatorios.</h1>
   <label for="agenda-bot">Taller: Tu primer bot con Python (30 cupos, trae tu computador)</label>
 
   <input type="checkbox" name="agenda" id="agenda-deploy" value="zero-to-deploy">
-  <label for="agenda-deploy">From zero to deploy (charla en inglés)</label>
+  <label for="agenda-deploy"><span lang="en">From zero to deploy</span> (charla en inglés)</label>
 
   <label for="talla">Talla de camiseta</label>
 <select name="talla" id="talla">
